@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { useId } from 'react-id-generator';
+import { v4 as uuidv4 } from 'uuid';
 
 function InputBox({
     label,
@@ -14,7 +14,7 @@ function InputBox({
     currencyDisable = false,
     className = ""
 }) {
-    const [amountInputId] = useId();
+    const amountInputId = new Date();
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
